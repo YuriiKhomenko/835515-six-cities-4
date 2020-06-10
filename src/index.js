@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 import App from "./components/app/app.jsx";
 
 const Settings = {
-  PLACES_COUNT: 10
+  PLACES_COUNT: 5
 };
 
 
