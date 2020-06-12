@@ -1,20 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import PlaceCard from "../place-card/place-card.jsx";
+import PlaceCardsList from "../place-cards-list/place-cards-list.jsx";
 import TYPES_OF_RENT from "../../constants.js";
 
 const Main = (props) => {
   const {placesCount, rentType} = props;
-
-  const generateCards = () => {
-    const cards = [];
-    for (let i = 0; i < placesCount; i++) {
-      cards.push(<PlaceCard
-        rentType={rentType}
-        key={rentType + i} />);
-    }
-    return cards;
-  };
 
   return (
     <React.Fragment>
@@ -119,9 +109,9 @@ const Main = (props) => {
                   </select>
                   */}
                 </form>
-                <div className="cities__places-list places__list tabs__content">
-                  {generateCards()}
-                </div>
+                <PlaceCardsList
+                  placesCount={placesCount}
+                  rentType={rentType} />
               </section>
               <div className="cities__right-section">
                 <section className="cities__map map"></section>
