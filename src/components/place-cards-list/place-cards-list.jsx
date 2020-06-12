@@ -6,9 +6,12 @@ import TYPES_OF_RENT from "../../constants.js";
 
 const PlaceCardsList = (props) => {
   const {placesCount, rentType} = props;
-  const cards = Array(placesCount)
-    .fill(<PlaceCard
-      rentType={rentType} />);
+  const cards = [];
+  for (let i = 0; i < placesCount; i++) {
+    cards.push(<PlaceCard
+      rentType={rentType}
+      key={rentType + i} />);
+  }
   return (
     <div className="cities__places-list places__list tabs__content">
       {cards}
