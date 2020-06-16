@@ -1,10 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import PlaceCardsList from "../place-cards-list/place-cards-list.jsx";
-import TYPES_OF_RENT from "../../constants.js";
 
 const Main = (props) => {
-  const {placesCount, rentType} = props;
+  const {rentTitles} = props;
 
   return (
     <React.Fragment>
@@ -85,7 +84,7 @@ const Main = (props) => {
             <div className="cities__places-container container">
               <section className="cities__places places">
                 <h2 className="visually-hidden">Places</h2>
-                <b className="places__found">{placesCount} places to stay in Amsterdam</b>
+                <b className="places__found">{rentTitles.length} places to stay in Amsterdam</b>
                 <form className="places__sorting" action="#" method="get">
                   <span className="places__sorting-caption">Sort by</span>
                   <span className="places__sorting-type" tabIndex="0">
@@ -110,8 +109,7 @@ const Main = (props) => {
                   */}
                 </form>
                 <PlaceCardsList
-                  placesCount={placesCount}
-                  rentType={rentType} />
+                  rentTitles={rentTitles} />
               </section>
               <div className="cities__right-section">
                 <section className="cities__map map"></section>
@@ -126,8 +124,7 @@ const Main = (props) => {
 
 
 Main.propTypes = {
-  placesCount: PropTypes.number.isRequired,
-  rentType: PropTypes.oneOf(TYPES_OF_RENT).isRequired,
+  rentTitles: PropTypes.array.isRequired
 };
 
 

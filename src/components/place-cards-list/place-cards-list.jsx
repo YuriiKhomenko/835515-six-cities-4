@@ -1,19 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
 import PlaceCard from "../place-card/place-card.jsx";
-import TYPES_OF_RENT from "../../constants.js";
 
 
 const PlaceCardsList = (props) => {
-  const {placesCount, rentType} = props;
+  const {rentTitles} = props;
 
-  const cards = Array(placesCount)
-    .fill(``)
-    .map((_, i) => {
+  const cards = rentTitles
+    .map((title, i) => {
       return (
         <PlaceCard
-          rentType={rentType}
-          key={rentType + i} />
+          rentTitle={title}
+          key={i} />
       );
     });
 
@@ -26,8 +24,7 @@ const PlaceCardsList = (props) => {
 
 
 PlaceCardsList.propTypes = {
-  placesCount: PropTypes.number.isRequired,
-  rentType: PropTypes.oneOf(TYPES_OF_RENT)
+  rentTitles: PropTypes.array.isRequired
 };
 
 

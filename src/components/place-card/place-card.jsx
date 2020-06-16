@@ -1,9 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import TYPES_OF_RENT from "../../constants.js";
 
 const PlaceCard = (props) => {
-  const {rentType} = props;
+  const {rentTitle} = props;
 
   return (
     <article className="cities__place-card place-card">
@@ -32,7 +31,7 @@ const PlaceCard = (props) => {
           </div>
         </div>
         <h2 className="place-card__name">
-          <a href="#">{rentType}</a>
+          <a href="#">{rentTitle}</a>
         </h2>
         <p className="place-card__type">Private room</p>
       </div>
@@ -42,7 +41,7 @@ const PlaceCard = (props) => {
 
 
 PlaceCard.propTypes = {
-  rentType: PropTypes.oneOf(TYPES_OF_RENT),
+  rentTitle: PropTypes.string.isRequired,
 };
 
 
