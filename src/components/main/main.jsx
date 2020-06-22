@@ -2,7 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import PlaceCardsList from "../place-cards-list/place-cards-list.jsx";
 
-const Main = ({rentTitles}) => {
+
+const Main = ({rentTitles, onCardTitleClick}) => {
   return (
     <React.Fragment>
       <div className="page page--gray page--main">
@@ -96,7 +97,8 @@ const Main = ({rentTitles}) => {
                   */}
                 </form>
                 <PlaceCardsList
-                  rentTitles={rentTitles} />
+                  rentTitles={rentTitles}
+                  onCardTitleClick={onCardTitleClick} />
               </section>
               <div className="cities__right-section">
                 <section className="cities__map map"></section>
@@ -111,7 +113,8 @@ const Main = ({rentTitles}) => {
 
 
 Main.propTypes = {
-  rentTitles: PropTypes.array.isRequired
+  rentTitles: PropTypes.array.isRequired,
+  onCardTitleClick: PropTypes.func.isRequired
 };
 
 

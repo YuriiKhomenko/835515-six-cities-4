@@ -6,6 +6,7 @@ it(`Render Main component`, () => {
   const tree = renderer
     .create(<Main
       rentTitles={[`Beautiful & luxurious apartment at great location`, `Wood and stone place`]}
+      onCardTitleClick={() => {}}
     />)
     .toJSON();
 

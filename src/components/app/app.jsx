@@ -3,10 +3,14 @@ import Main from "../main/main.jsx";
 import PropTypes from "prop-types";
 
 
+const cardTitleClickHandler = () => {};
+
+
 const App = ({rentTitles}) => {
   return (
     <Main
-      rentTitles={rentTitles} />
+      rentTitles={rentTitles}
+      onCardTitleClick={cardTitleClickHandler} />
   );
 };
 

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import PlaceCard from "../place-card/place-card.jsx";
 
 
-const PlaceCardsList = ({rentTitles}) => {
+const PlaceCardsList = ({rentTitles, onCardTitleClick}) => {
   return (
     <div className="cities__places-list places__list tabs__content">
       {rentTitles.map((title, i) => {
@@ -11,7 +11,7 @@ const PlaceCardsList = ({rentTitles}) => {
           <PlaceCard
             rentTitle={title}
             key={i}
-            onCardTitleClick={() => {}} />
+            onCardTitleClick={onCardTitleClick} />
         );
       })}
     </div>
@@ -20,7 +20,8 @@ const PlaceCardsList = ({rentTitles}) => {
 
 
 PlaceCardsList.propTypes = {
-  rentTitles: PropTypes.array.isRequired
+  rentTitles: PropTypes.array.isRequired,
+  onCardTitleClick: PropTypes.func.isRequired
 };
 
 
