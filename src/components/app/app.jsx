@@ -2,22 +2,18 @@ import React from "react";
 import Main from "../main/main.jsx";
 import PropTypes from "prop-types";
 
-
 const cardTitleClickHandler = () => {};
 
-
-const App = ({rentTitles}) => {
+const App = ({offers}) => {
   return (
     <Main
-      rentTitles={rentTitles}
+      offers={offers}
       onCardTitleClick={cardTitleClickHandler} />
   );
 };
 
-
 App.propTypes = {
-  rentTitles: PropTypes.array.isRequired,
+  offers: PropTypes.array.isRequired,
 };
-
 
 export default App;

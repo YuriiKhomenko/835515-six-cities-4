@@ -3,6 +3,7 @@
 exports[`Render Place Card component 1`] = `
 <article
   className="cities__place-card place-card"
+  onMouseOver={[Function]}
 >
   <div
     className="cities__image-wrapper place-card__image-wrapper"
@@ -31,12 +32,14 @@ exports[`Render Place Card component 1`] = `
         <b
           className="place-card__price-value"
         >
-          €80
+          €
+          80
         </b>
         <span
           className="place-card__price-text"
         >
-          / night
+          / 
+          night
         </span>
       </div>
       <button
@@ -68,7 +71,7 @@ exports[`Render Place Card component 1`] = `
         <span
           style={
             Object {
-              "width": "80%",
+              "width": "100%",
             }
           }
         />
@@ -86,7 +89,7 @@ exports[`Render Place Card component 1`] = `
       <a
         href="#"
       >
-        Wood and stone place
+        Beautiful & luxurious apartment at great location
       </a>
     </h2>
     <p

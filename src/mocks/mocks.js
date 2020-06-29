@@ -1,8 +1,4 @@
-import React from "react";
-import renderer from "react-test-renderer";
-import PlaceCardList from "./place-cards-list.jsx";
-
-const OFFERS = [
+const offers = [
   {
     price: 80,
     priceType: `night`,
@@ -33,13 +29,4 @@ const OFFERS = [
   },
 ];
 
-it(`Render Place Card List component`, () => {
-  const tree = renderer
-    .create(<PlaceCardList
-      offers={OFFERS}
-      onCardTitleClick={() => {}}
-    />)
-    .toJSON();
-
-  expect(tree).toMatchSnapshot();
-});
+export default offers;
