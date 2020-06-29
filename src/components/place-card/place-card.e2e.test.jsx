@@ -3,22 +3,49 @@ import Enzyme, {shallow} from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import PlaceCard from "./place-card.jsx";
 
+const OFFER = {
+  price: 80,
+  priceType: `night`,
+  rating: 5,
+  offerTitle: `Beautiful & luxurious apartment at great location`,
+  offerPlace: `Private room`,
+};
+
 Enzyme.configure({
   adapter: new Adapter(),
 });
 
-it(`Should card title be pressed`, () => {
-  const onCardTitleClick = jest.fn();
+describe(`E2E test for Place Card component`, () => {
 
-  const main = shallow(<PlaceCard
-    rentTitle={`Wood and stone place`}
-    onCardTitleClick={onCardTitleClick}
-  />
-  );
+  it(`Should card title be pressed`, () => {
+    const clickTitleHandler = jest.fn();
 
-  const welcomeButton = main.find(`h2.place-card__name`);
+    const main = shallow(<PlaceCard
+      offer={OFFER}
+      onCardTitleClick={clickTitleHandler}
+    />
+    );
 
-  welcomeButton.props().onClick();
+    const cardTitle = main.find(`.place-card__name`);
 
-  expect(onCardTitleClick.mock.calls.length).toBe(1);
+    cardTitle.simulate(`click`);
+
+    expect(clickTitleHandler).toHaveBeenCalledTimes(1);
+  });
+
+  it(`Should card be hovered`, () => {
+    const onCardHover = jest.fn();
+
+    const main = shallow(<PlaceCard
+      offer={OFFER}
+      onCardHover={onCardHover}
+    />
+    );
+
+    const card = main.find(`.place-card`);
+
+    card.simulate(`mouseover`);
+
+    expect(onCardHover).toHaveBeenCalledTimes(1);
+  });
 });

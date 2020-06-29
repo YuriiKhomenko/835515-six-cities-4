@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import PlaceCardsList from "../place-cards-list/place-cards-list.jsx";
 
 
-const Main = ({rentTitles, onCardTitleClick}) => {
+const Main = ({offers, onCardTitleClick}) => {
   return (
     <React.Fragment>
       <div className="page page--gray page--main">
@@ -72,7 +72,7 @@ const Main = ({rentTitles, onCardTitleClick}) => {
             <div className="cities__places-container container">
               <section className="cities__places places">
                 <h2 className="visually-hidden">Places</h2>
-                <b className="places__found">{rentTitles.length} places to stay in Amsterdam</b>
+                <b className="places__found">{offers.length} places to stay in Amsterdam</b>
                 <form className="places__sorting" action="#" method="get">
                   <span className="places__sorting-caption">Sort by</span>
                   <span className="places__sorting-type" tabIndex="0">
@@ -97,7 +97,7 @@ const Main = ({rentTitles, onCardTitleClick}) => {
                   */}
                 </form>
                 <PlaceCardsList
-                  rentTitles={rentTitles}
+                  offers={offers}
                   onCardTitleClick={onCardTitleClick} />
               </section>
               <div className="cities__right-section">
@@ -113,7 +113,7 @@ const Main = ({rentTitles, onCardTitleClick}) => {
 
 
 Main.propTypes = {
-  rentTitles: PropTypes.array.isRequired,
+  offers: PropTypes.array.isRequired,
   onCardTitleClick: PropTypes.func.isRequired
 };
 
