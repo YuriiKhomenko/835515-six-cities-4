@@ -86,7 +86,7 @@ exports[`Render Place Card component 1`] = `
       onClick={[Function]}
     >
       <a
-        href="#"
+        href="/dev-details"
       >
         Beautiful & luxurious apartment at great location
       </a>

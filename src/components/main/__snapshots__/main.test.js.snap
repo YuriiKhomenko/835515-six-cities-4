@@ -309,7 +309,7 @@ exports[`Render Main component 1`] = `
                   onClick={[Function]}
                 >
                   <a
-                    href="#"
+                    href="/dev-details"
                   >
                     Beautiful & luxurious apartment at great location
                   </a>
@@ -406,7 +406,7 @@ exports[`Render Main component 1`] = `
                   onClick={[Function]}
                 >
                   <a
-                    href="#"
+                    href="/dev-details"
                   >
                     Wood and stone place
                   </a>
@@ -503,7 +503,7 @@ exports[`Render Main component 1`] = `
                   onClick={[Function]}
                 >
                   <a
-                    href="#"
+                    href="/dev-details"
                   >
                     Wood and stone place
                   </a>
@@ -600,7 +600,7 @@ exports[`Render Main component 1`] = `
                   onClick={[Function]}
                 >
                   <a
-                    href="#"
+                    href="/dev-details"
                   >
                     Beautiful & luxurious apartment at great location
                   </a>
