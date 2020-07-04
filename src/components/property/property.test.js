@@ -1,8 +1,8 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import PlaceCard from "./place-card.jsx";
+import Property from "../property/property.jsx";
 
-const OFFER = {
+const offer = {
   title: `Beautiful & luxurious apartment at great location`,
   price: 80,
   type: `apartment`,
@@ -13,11 +13,10 @@ const OFFER = {
   ],
 };
 
-it(`Render Place Card component`, () => {
+it(`Render Property component`, () => {
   const tree = renderer
-    .create(<PlaceCard
-      offer={OFFER}
-      onCardTitleClick={() => {}}
+    .create(<Property
+      offer={offer}
     />)
     .toJSON();
 

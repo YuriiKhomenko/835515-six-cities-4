@@ -41,8 +41,7 @@ exports[`Render Place Card List component 1`] = `
           <span
             className="place-card__price-text"
           >
-            / 
-            night
+            / night
           </span>
         </div>
         <button
@@ -98,7 +97,7 @@ exports[`Render Place Card List component 1`] = `
       <p
         className="place-card__type"
       >
-        Private room
+        apartment
       </p>
     </div>
   </article>
@@ -139,8 +138,7 @@ exports[`Render Place Card List component 1`] = `
           <span
             className="place-card__price-text"
           >
-            / 
-            night
+            / night
           </span>
         </div>
         <button
@@ -172,7 +170,7 @@ exports[`Render Place Card List component 1`] = `
           <span
             style={
               Object {
-                "width": "90%",
+                "width": "86%",
               }
             }
           />
@@ -196,7 +194,7 @@ exports[`Render Place Card List component 1`] = `
       <p
         className="place-card__type"
       >
-        Hotel room
+        house
       </p>
     </div>
   </article>
@@ -232,13 +230,12 @@ exports[`Render Place Card List component 1`] = `
             className="place-card__price-value"
           >
             €
-            50
+            75
           </b>
           <span
             className="place-card__price-text"
           >
-            / 
-            day
+            / night
           </span>
         </div>
         <button
@@ -288,13 +285,13 @@ exports[`Render Place Card List component 1`] = `
         <a
           href="#"
         >
-          Beautiful & luxurious apartment at great location
+          Wood and stone place
         </a>
       </h2>
       <p
         className="place-card__type"
       >
-        Kitchen table
+        hotel
       </p>
     </div>
   </article>
@@ -335,8 +332,7 @@ exports[`Render Place Card List component 1`] = `
           <span
             className="place-card__price-text"
           >
-            / 
-            night
+            / night
           </span>
         </div>
         <button
@@ -368,7 +364,7 @@ exports[`Render Place Card List component 1`] = `
           <span
             style={
               Object {
-                "width": "100%",
+                "width": "84%",
               }
             }
           />
@@ -386,13 +382,13 @@ exports[`Render Place Card List component 1`] = `
         <a
           href="#"
         >
-          Wood and stone place
+          Beautiful & luxurious apartment at great location
         </a>
       </h2>
       <p
         className="place-card__type"
       >
-        Private room
+        room
       </p>
     </div>
   </article>

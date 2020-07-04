@@ -38,8 +38,7 @@ exports[`Render Place Card component 1`] = `
         <span
           className="place-card__price-text"
         >
-          / 
-          night
+          / night
         </span>
       </div>
       <button
@@ -95,7 +94,7 @@ exports[`Render Place Card component 1`] = `
     <p
       className="place-card__type"
     >
-      Private room
+      apartment
     </p>
   </div>
 </article>

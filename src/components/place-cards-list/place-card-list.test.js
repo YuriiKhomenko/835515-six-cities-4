@@ -4,32 +4,44 @@ import PlaceCardList from "./place-cards-list.jsx";
 
 const OFFERS = [
   {
+    title: `Beautiful & luxurious apartment at great location`,
     price: 80,
-    priceType: `night`,
+    type: `apartment`,
+    premium: true,
     rating: 5,
-    offerTitle: `Beautiful & luxurious apartment at great location`,
-    offerPlace: `Private room`,
+    images: [
+      `img/apartment-01.jpg`, `img/apartment-02.jpg`, `img/studio-01.jpg`,
+    ],
   },
   {
+    title: `Wood and stone place`,
     price: 100,
-    priceType: `night`,
-    rating: 4.5,
-    offerTitle: `Wood and stone place`,
-    offerPlace: `Hotel room`,
+    type: `house`,
+    premium: false,
+    rating: 4.3,
+    images: [
+      `img/apartment-03.jpg`, `img/apartment-02.jpg`, `img/studio-01.jpg`,
+    ],
   },
   {
-    price: 50,
-    priceType: `day`,
+    title: `Wood and stone place`,
+    price: 75,
+    type: `hotel`,
+    premium: false,
     rating: 3.5,
-    offerTitle: `Beautiful & luxurious apartment at great location`,
-    offerPlace: `Kitchen table`,
+    images: [
+      `img/apartment-01.jpg`, `img/studio-01.jpg`,
+    ],
   },
   {
+    title: `Beautiful & luxurious apartment at great location`,
     price: 125,
-    priceType: `night`,
-    rating: 5,
-    offerTitle: `Wood and stone place`,
-    offerPlace: `Private room`,
+    type: `room`,
+    premium: true,
+    rating: 4.2,
+    images: [
+      `img/apartment-03.jpg`, `img/studio-01.jpg`,
+    ],
   },
 ];
 

@@ -1,5 +1,6 @@
+/* global __dirname */
 const path = require(`path`);
-const joinedPath = path.join(__dirname, `public`)
+const joinedPath = path.join(__dirname, `public`);
 
 module.exports = {
   entry: `./src/index.js`,
@@ -11,6 +12,7 @@ module.exports = {
     contentBase: joinedPath,
     open: true,
     port: 1337,
+    historyApiFallback: true,
   },
   module: {
     rules: [

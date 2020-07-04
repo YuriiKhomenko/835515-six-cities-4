@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const PlaceCard = (props) => {
   const {offer, onCardTitleClick, onCardHover} = props;
-  const {price, priceType, rating, offerTitle, offerPlace} = offer;
+  const {price, rating, title, type} = offer;
 
   return (
     <article
@@ -24,7 +24,7 @@ const PlaceCard = (props) => {
         <div className="place-card__price-wrapper">
           <div className="place-card__price">
             <b className="place-card__price-value">&euro;{price}</b>
-            <span className="place-card__price-text">&#47;&nbsp;{priceType}</span>
+            <span className="place-card__price-text">&#47;&nbsp;night</span>
           </div>
           <button className="place-card__bookmark-button place-card__bookmark-button--active button" type="button">
             <svg className="place-card__bookmark-icon" width="18" height="19">
@@ -42,11 +42,11 @@ const PlaceCard = (props) => {
         <h2
           onClick={onCardTitleClick}
           className="place-card__name">
-          <a href="#">{offerTitle}</a>
+          <a href="#">{title}</a>
         </h2>
-        <p className="place-card__type">{offerPlace}</p>
+        <p className="place-card__type">{type}</p>
       </div>
-    </article >
+    </article>
   );
 };
 
@@ -55,10 +55,9 @@ PlaceCard.propTypes = {
   onCardHover: PropTypes.func,
   offer: PropTypes.shape({
     price: PropTypes.number.isRequired,
-    priceType: PropTypes.string.isRequired,
     rating: PropTypes.number.isRequired,
-    offerTitle: PropTypes.string.isRequired,
-    offerPlace: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
   }),
 };
 

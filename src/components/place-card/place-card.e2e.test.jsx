@@ -4,11 +4,14 @@ import Adapter from "enzyme-adapter-react-16";
 import PlaceCard from "./place-card.jsx";
 
 const OFFER = {
+  title: `Beautiful & luxurious apartment at great location`,
   price: 80,
-  priceType: `night`,
+  type: `apartment`,
+  premium: true,
   rating: 5,
-  offerTitle: `Beautiful & luxurious apartment at great location`,
-  offerPlace: `Private room`,
+  images: [
+    `img/apartment-01.jpg`, `img/apartment-02.jpg`, `img/studio-01.jpg`,
+  ],
 };
 
 Enzyme.configure({
