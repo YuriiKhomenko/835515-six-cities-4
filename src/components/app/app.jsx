@@ -3,35 +3,36 @@ import Main from "../main/main.jsx";
 import Property from "../property/property.jsx";
 import PropTypes from "prop-types";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
-import mocks from "../../mocks/mocks.js";
 
 class App extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      chosenOffer: mocks[0],
+      chosenOffer: null,
     };
-    this.handlerTitleClick = this.handlerTitleClick.bind(this);
+    this.handleTitleClick = this.handleTitleClick.bind(this);
   }
 
-  handlerTitleClick(offer) {
+  handleTitleClick(offer) {
     this.setState({
       chosenOffer: offer,
     });
   }
 
   render() {
+    const {offers} = this.props;
+    const {chosenOffer} = this.state;
     return (
       <BrowserRouter>
         <Switch>
           <Route exact path="/">
             <Main
-              offers={mocks}
-              onCardTitleClick={this.handlerTitleClick} />
+              offers={offers}
+              onCardTitleClick={this.handleTitleClick} />
           </Route>
           <Route exact path="/dev-details">
             <Property
-              offer={this.state.chosenOffer} />
+              offer={chosenOffer} />
           </Route>
         </Switch>
       </BrowserRouter>);

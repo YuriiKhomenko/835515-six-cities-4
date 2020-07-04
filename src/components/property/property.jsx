@@ -120,7 +120,7 @@ Property.propTypes = {
     premium: PropTypes.bool,
     rating: PropTypes.number,
     images: PropTypes.arrayOf(PropTypes.string)
-  }).isRequired,
+  }),
 };
 
 export default Property;
