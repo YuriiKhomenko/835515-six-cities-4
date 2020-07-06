@@ -7,35 +7,46 @@ import {BrowserRouter, Route, Switch} from "react-router-dom";
 class App extends PureComponent {
   constructor(props) {
     super(props);
+
     this.state = {
       chosenOffer: null,
     };
-    this.handleTitleClick = this.handleTitleClick.bind(this);
+
+    this.onCardTitleClick = this.onCardTitleClick.bind(this);
   }
 
-  handleTitleClick(offer) {
+  onCardTitleClick(offer) {
     this.setState({
       chosenOffer: offer,
     });
   }
 
-  render() {
+  _renderApp() {
     const {offers} = this.props;
     const {chosenOffer} = this.state;
+
+    return (
+      !chosenOffer
+        ? <Main offers={offers} onCardTitleClick={this.onCardTitleClick} />
+        : <Property offer={chosenOffer} />
+    );
+  }
+
+  render() {
+    const {offers} = this.props;
+
     return (
       <BrowserRouter>
         <Switch>
           <Route exact path="/">
-            <Main
-              offers={offers}
-              onCardTitleClick={this.handleTitleClick} />
+            {this._renderApp()}
           </Route>
           <Route exact path="/dev-details">
-            <Property
-              offer={chosenOffer} />
+            <Property offer={offers[0]} />
           </Route>
         </Switch>
-      </BrowserRouter>);
+      </BrowserRouter>
+    );
   }
 }
 
